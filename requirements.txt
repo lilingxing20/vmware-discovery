@@ -1,0 +1,2 @@
+nova==13.0.0
+oslo_vmware
