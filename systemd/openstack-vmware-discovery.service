@@ -1,0 +1,10 @@
+[Unit]
+Description=Openstack Cloud Platform to register for the Virtual Machine for vmware driver
+After=syslog.target network.target
+
+[Service]
+ExecStart=/usr/bin/vmware-discovery --config-file /etc/vmware-discovery.conf
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

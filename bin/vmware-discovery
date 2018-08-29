@@ -1,0 +1,16 @@
+#!/usr/bin/python
+
+import sys
+import os
+
+import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+import oslo_i18n as i18n
+
+i18n._gettextutils.install('nova')
+
+from vmware_discovery.cmd.discovery import main
+
+if __name__ == "__main__":
+    sys.exit(main())
